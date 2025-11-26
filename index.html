@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Card Details Form | Frontend Mentor</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="main-container">
+    <!-- Left Background & Cards -->
+    <section class="card-section">
+      <img src="./images/bg-main-desktop.png" alt="Background" class="bg-main-desktop"/>
+      <img src="images/bg-main-mobile.png" class="bg-main-mobile hiddens" alt="Background"/>
+
+      <!-- Card Front -->
+      <div class="card card-front">
+        <img src="./images/bg-card-front.png" alt="Card Front Background" class="card-img" />
+        <img src="./images/card-logo.svg" alt="card-logo" class="card-logo"/>
+        <div class="card-front-content">
+        
+          <h3 class="card-number" id="display-number">0000 0000 0000 0000</h3>
+          <div class="card-details">
+            <p class="cardholder-name" id="display-name" >Jane Appleseed</p>
+            <p class="card-expiry"><span id="display-month">00</span>/<span id="display-year">00</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Back -->
+      <div class="card card-back">
+        <img src="./images/bg-card-back.png" alt="Card Back Background" class="card-img" />
+
+        <p class="cvc" id="display-cvc">000</p>
+      </div>
+    </section>
+    <!-- Right Form -->
+    <section class="form-section">
+      <form class="card-form" id="card-form">
+        <label for="cardholder-name">Cardholder Name</label>
+        <input type="text" id="cardholder-name" placeholder="e.g. Jane Appleseed">
+        <span class="error" id="name-error"></span>
+
+        <label for="card-number">Card Number</label>
+        <input type="text" maxlength="19" id="card-number" placeholder="e.g. 1234 5678 9123 0000">
+        <span class="error" id="number-error"></span>
+
+        <div class="form-row">
+          <div class="exp-date">
+            <label for="exp-date">Exp. Date (MM/YY)</label>
+            <div class="exp-inputs">
+              <div>
+                <input type="text" id="exp-month" maxlength="2" placeholder="MM">
+                <span class="error" id="month-error"></span>
+              </div>
+             <div>
+              <input type="text" id="exp-year" maxlength="2" placeholder="YY">
+              <span class="error" id="year-error"></span>
+             </div>
+
+              
+            </div>
+          </div>
+
+          <div class="cvc-input">
+            <label for="cvc">CVC</label>
+            <input type="text" id="cvc" maxlength="3" placeholder="e.g. 123">
+            <span class="error" id="cvc-error"></span>
+          </div>
+        </div>
+
+        <button type="submit" id="confirm-btn">Confirm</button>
+      </form>
+
+      <!--Thank you section-->
+
+      <div class="thank-you hidden" id="thank-you">
+        <img src="./images/icon-complete.svg" alt="icon-complete" class="icon-complete"/>
+        <h2>Thank you!</h2>
+        <p>We've added your card details</p>
+        <button id="continue-btn">Continue</button>
+      </div>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>

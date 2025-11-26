@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+  
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Space Grotesk", sans-serif;
+ 
+    font-weight: 500;
+    font-style: normal;
+    background-color: hsl(0, 0%, 100%);
+  }
+  
+  .main-container {
+    display: flex;
+    
+    width: 100%;
+    height: 100vh;
+  }
+  
+  /* Left Section */
+  .card-section {
+    position: relative;
+   
+  }
+  
+  .bg-main-desktop {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* Cards */
+  .card {
+    position: absolute;
+    width: 447px;
+    height: 245px;
+  }
+  
+  .card-front {
+    top: 150px;
+    left: 150px;
+    color: white;
+  }
+  
+  .card-back {
+    top: 440px;
+    left: 250px;
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Front Card Content */
+  .card-front-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .card-logo{
+    position: absolute;
+    top:35px;
+    left: 40px;
+  }
+  .card-number {
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin-top: 100px;
+    font-weight: 500;
+  }
+  
+  .card-details {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  
+  .cvc {
+    position: absolute;
+    top: 110px;
+    right: 60px;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  
+  /* Right Section (Form) */
+  .form-section {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 350px;
+  }
+  
+  label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: hsl(278, 68%, 11%);
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 8px;
+    
+  }
+  
+  input::placeholder {
+    color: hsl(279, 6%, 55%);
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 15px;
+  
+  }
+  
+  .exp-date {
+    flex: 1;
+  }
+  .exp-inputs{
+    display: flex;
+  
+  }
+ /* Month + Year fields */
+ .exp-inputs input {
+  width: 60px;   /* smaller width */
+  padding: 8px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+/* CVC field */
+.cvc-input input {
+  width: 150px;
+  padding: 8px;
+  /* font-size: 14px; */
+}
+  
+  .cvc-input {
+    flex: 1;
+    
+  }
+  
+  button {
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: hsl(279, 70%, 40%);
+  }
+
+  /* Error styles */
+.error {
+    color: hsl(0, 100%, 66%);
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+  }
+  
+  input.error-input {
+    border-color: hsl(0, 100%, 66%);
+  }
+  /* Thank You Section */
+.thank-you {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .thank-you img {
+    width: 70px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  .bg-main-mobile {
+    display: none;
+  }
+
+  /* ============================= */
+/*         MOBILE 375px          */
+/* ============================= */
+@media (max-width: 768px) {
+  body {
+    min-height: auto;
+    background-color: white;
+    display: block;
+  }
+
+  .main-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  /* Left section (background + cards) */
+  .card-section {
+    width: 100%;
+    height: 240px;
+    position: relative;
+  }
+
+  .bg-main-desktop {
+    display: none;
+  }
+
+  /* Mobile background */
+  .bg-main-mobile {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Card sizes smaller */
+  .card {
+    width: 290px;
+    height: 160px;
+  }
+
+  /* Front card position */
+  .card-front {
+    top: 110px;
+    left: 20px;
+  }
+
+  /* Back card */
+  .card-back {
+    top: 20px;
+    left: 50px;
+  }
+
+  .card-logo {
+    width: 55px;
+    top: 20px;
+    left: 20px;
+  }
+
+  .card-number {
+    font-size: 18px;
+    margin-top: 60px;
+    letter-spacing: 2px;
+  }
+
+  .card-details {
+    font-size: 10px;
+  }
+  .hidden {
+    display: none;
+  }
+  .cvc {
+    top: 65px;
+    right: 25px;
+    font-size: 12px;
+  }
+
+  /* Right section form */
+  .form-section {
+    width: 100%;
+    padding: 40px 20px;
+    justify-content: flex-start;
+  }
+
+  .card-form {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  /* Thank You message */
+ 
+  .thank-you {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .thank-you img {
+    width: 70px;
+  }
+}
+
+/* ============================= */
+/*         MOBILE 375px FIX      */
+/* ============================= */
+@media (max-width: 430px) {
+  .card-front {
+    left:15px;
+   z-index: 1;
+  }
+
+  .card-back {
+   
+    left: 53px;
+  }
+
+  .card {
+    width: 270px;
+    height: 150px;
+   
+  }
+
+  .card-number {
+    font-size: 16px;
+  }
+  .cardholder-name,.card-expiry{
+    margin: 10px;
+    
+  } .hidden {
+    display: none;
+  }
+   /* Thank You message */
+ 
+   .thank-you {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .thank-you img {
+    width: 70px;
+  }
+
+}
+/* Mobile: Make Month, Year, CVC Inputs Smaller */
+@media (max-width: 500px) {
+
+  .form-row {
+    display: flex;
+    gap: 10px;
+  }
+
+  /* EXP date container */
+  .exp-inputs {
+    gap: 8px;
+  }
+
+  /* Month + Year fields */
+  .exp-inputs input {
+    width: 60px;   /* smaller width */
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  /* CVC field */
+  .cvc-input input {
+    width: 150px;
+    /* padding: 8px; */
+    /* font-size: 14px; */
+  }
+
+  /* Make labels smaller */
+  label {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+   /* Thank You message */
+ 
+   .thank-you {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .thank-you img {
+    width: 70px;
+  }
+  .hidden {
+    display: none;
+  }
+}
